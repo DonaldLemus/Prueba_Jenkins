@@ -1,0 +1,46 @@
+public class Calculator {
+
+    // Suma de dos números
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Resta de dos números
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    // Multiplicación de dos números
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    // División de dos números
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero.");
+        }
+        return (double) a / b;
+    }
+
+    // Raíz cuadrada de un número
+    public double squareRoot(int a) {
+        if (a < 0) {
+            throw new IllegalArgumentException("Cannot take the square root of a negative number.");
+        }
+        return Math.sqrt(a);
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        // Ejemplo de cálculos
+        int a = 10;
+        int b = 5;
+        System.out.println("The sum of " + a + " and " + b + " is " + calculator.add(a, b) + ".");
+        System.out.println("The difference between " + a + " and " + b + " is " + calculator.subtract(a, b) + ".");
+        System.out.println("The product of " + a + " and " + b + " is " + calculator.multiply(a, b) + ".");
+        System.out.println("The division of " + a + " by " + b + " is " + calculator.divide(a, b) + ".");
+        System.out.println("The square root of " + a + " is " + calculator.squareRoot(a) + ".");
+    }
+}
