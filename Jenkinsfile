@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar código') {
             steps {
-                git 'https://github.com/tu_usuario/tu_proyecto.git'
+                git 'https://github.com/DonaldLemus/Prueba_Jenkins/tree/main'
             }
         }
         stage('Instalar Dependencias') {
